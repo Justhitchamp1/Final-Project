@@ -24,4 +24,11 @@ nba_teams = {
     "New York Knicks": {"players": ["Patrick Ewing", "Carmelo Anthony", "Walt Fraizer", "Willis Reed", "Bernard King"], "coach": "Red Holzman", "sixth": "John Starks"},
     "Oklahoma City Thunder": {"players": ["Kevin Durant", "Russell Westrbook", "Shai", "James Harden", "Paul George"], "coach": "Scott Brooks", "sixth": "Gary Payton"},
     "Orlando Magic": {"players": ["Dwight Howard, "Shaq", "Tracy McGrady", "Penny Hardaway", "Nick Anderson"], "coach": "Stan Van Gundy", "sixth": "Dennis Scott"},
-    "
+    "Philadelphia 76ers": {"players": ["Allen Iverson", "Julius Erving", "Wilt Chamberlein", "Joel Embiid", "Charles Barkley"], "coach": "Larry Brown", "sixth": "Bobby Jones"},
+    "Phoenix Suns": {"players": ["Steve Nash", "Charles Barkley", "Devin Booker", "Kevin Johnson", "Amar'e stoudemire"], "coach": "Mike D'Antoni", "sixth": "Leandro Barbosa"},
+    "Portland Trail Blazers": {"players": ["Damian Lilard", "Clyde Drexler", "Bill Walton", "LaMarcus Almdridge", "Terry Porter"], "coach": "Jack Ramsey", "sixth": "Cliff Robinson"},
+    "Sacramento Kings": {"players": ["Oscar Robertson", "Chris Webber", "Peja Stojakovic", "Mitch Richmond", "De'Aaron Fox"], "coach": "Rick Adelmen", "sixth": "Bobby Jackson"},
+    "San Antonio Spurs": {"players": ["Tim Duncan", "Tony Parker", "Manu Ginobili", "David Robinson", "George Gervin"], "coach": "Gregg Popovich", "sixth": "Wemby"},
+    "Toronto Raptors": {"players": ["Kawhi Leonard", "Vince Carter", "Kyle Lowry", "Chris Bosh", "Demar Derozan"], "coach": "Nick Nurse", "sixth": "Fred VanVleet"},
+    "Utah Jazz": {"players": ["Karl Malone", "John Stockton", "Donovon Mitchell", "Pete Maravich", "Rudy Gobert"], "coach": "Jerry Sloan", "sixth": "Joe Ingles"},
+    "Washington Wizards": {"players": ["Wes Unseld", "Elvin Hayes", "John Wall", "Bradley Beal", "Gilbert Areans"], "coach": "Dick Motta", "sixth": "Antwan Jamison"}}
