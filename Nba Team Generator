@@ -1,0 +1,15 @@
+import random
+import tkinter as tk 
+
+nba_teams = {
+    "Atlanta Hawks": {"players": ["Dominique Wilkins", "Bob Pettit", "Joe Johnson", "Lou Hudson", "Pete Maravich"], "coach": "Lenny Wilkins", "sixth": "Jamal Crawford"},
+    "Boston Celtics": {"players": ["Bill Russell", "Larry Bird", "Paul Pierce", "John Havlicek", "Bob Cousy"], "coach": "Red Auerbach", "sixth": "Kevin Mchale"},
+    "Brooklyn Nets": {"players": ["Kevin durant", "James Harden", "Kyrie irving", "Jason Kidd", "Julius Erving"], "coach": "Byron scott", "sixth": "Richard Jefferson"},
+    "Charlotte Hornets": {"players": ["Kemba Walker", "Alonzo Morning", "Lamelo Ball", "Dell Curry", "Larry Johnson"], "coach": "Steve Clifford", "sixth": "Kon Knuepell"},
+    "Chicago Bulls": {"players": ["Michael Jordan", "Scottie Pippen", "Derrick Rose", "Dennis Rodman", "Bob Love"], "coach": "Phil Jackson", "sixth": "Toni Kukoc"},
+    "Cleveland Cavaliers": {"players": ["Lebron James", "Shaq", "Kyrie irving", "Kevin Love", "Mark Price"], "coach": "Tyronn Lue", "sixth": "JR Smith"},
+    "Dallas Mavericks": {"players": ["Dirk Nowitzki", "Luka Doncic", "Kyrie Irving", "Steve Nash", "Jason Kidd"], "coach": "Rick Carlisle", "sixth": "Anthony Davis"},
+    "Denver Nuggets": {"players": ["Nikola Jokic", "Alex English", "Carmelo Anthony", "Dan Issel", "Chauncey Billups"], "coach": "Doug Moe", "sixth": "Jamal Crawford"},
+    "Detroit Pistons": {"players": ["Isiah Thomas", "Joe Dumars", "Dennis Rodman", "Ben Wallace", "Chauncey Billups"], "coach": "Chuck Daly", "sixth": "Vinnie Johnson"},
+    "Golden State Warriors": {"players": ["Stephen Curry", "Kevin Durant", "Klay Thompson", "Wilt Chamberlain", "Draymond Green"], "coach": "Steve Kerr", "sixth": "Andre Iguodala"},
+    "Houston Rockets": {"players": ["Hakeem Olajuwon", "James Harden",
