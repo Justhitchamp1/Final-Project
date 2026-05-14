@@ -32,3 +32,49 @@ nba_teams = {
     "Toronto Raptors": {"players": ["Kawhi Leonard", "Vince Carter", "Kyle Lowry", "Chris Bosh", "Demar Derozan"], "coach": "Nick Nurse", "sixth": "Fred VanVleet"},
     "Utah Jazz": {"players": ["Karl Malone", "John Stockton", "Donovon Mitchell", "Pete Maravich", "Rudy Gobert"], "coach": "Jerry Sloan", "sixth": "Joe Ingles"},
     "Washington Wizards": {"players": ["Wes Unseld", "Elvin Hayes", "John Wall", "Bradley Beal", "Gilbert Areans"], "coach": "Dick Motta", "sixth": "Antwan Jamison"}}
+
+class Team:
+    def__init__(self, name, data):
+        self.name = name
+        self.players = data["players"]    
+        self.coach = data ["coach"]
+        self.sixth = data ["sixth"
+    def get_player(self, number):
+        return self.players[number - 1]
+
+class NBATeam(Team):
+    def get_info(self, number):
+        player = self.get_player(number)
+        return (
+            f"Team: {self.name}\n"
+            f"Player: {player}\n"
+            f"coach: {self.coach}\n"
+            f"6th Man: {self.sixth}")
+
+class App
+    def __init__(self, root):
+        self.root = root
+        self.root.title("NBA GENERATOR")
+
+        self.label = tk.Label(root, text="Pick a number from 1-5")
+        self.label.pack()
+
+        self.entry = tk.Entry(root)
+        self.entry.pack()
+
+        self.button = tk.Button(root, text="Get An NBA team", command=self.get_result)
+        self.button.pack()
+
+        self.result = tk.Label(root, text="")
+        self.result.pack()
+
+        self.teams = []
+        for name in nba_teams:
+            team = NBATeam(name, nba_teams[name])
+            self.teams.append(team)
+    def get_result(self):
+        try:
+            num = int(self.entry.get())
+            if num < 1 or num > 5:
+                self.result["text"] = "Enter a number between 1-5"
+                return
