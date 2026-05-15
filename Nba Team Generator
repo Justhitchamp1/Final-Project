@@ -78,3 +78,12 @@ class App
             if num < 1 or num > 5:
                 self.result["text"] = "Enter a number between 1-5"
                 return
+            team = random.choice(self.teams)
+            info = team.get_info(num)
+            self.result["text"] = info
+        except:
+            self.result["text" = "Invalid Input. Enter a number"
+
+root = tk.Tk()
+app = App(root)
+root.mainloop()
