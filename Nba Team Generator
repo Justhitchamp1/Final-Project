@@ -23,7 +23,7 @@ nba_teams = {
     "New Orleans Pelicans": {"players": ["Chris Paul", "Anthony Davis", "Zion", "David West", "Jrue Holiday"], "coach": "Monty Williams", "sixth": "Tyreke Evans"},
     "New York Knicks": {"players": ["Patrick Ewing", "Carmelo Anthony", "Walt Fraizer", "Willis Reed", "Bernard King"], "coach": "Red Holzman", "sixth": "John Starks"},
     "Oklahoma City Thunder": {"players": ["Kevin Durant", "Russell Westrbook", "Shai", "James Harden", "Paul George"], "coach": "Scott Brooks", "sixth": "Gary Payton"},
-    "Orlando Magic": {"players": ["Dwight Howard, "Shaq", "Tracy McGrady", "Penny Hardaway", "Nick Anderson"], "coach": "Stan Van Gundy", "sixth": "Dennis Scott"},
+    "Orlando Magic": {"players": ["Dwight Howard", "Shaq", "Tracy McGrady", "Penny Hardaway", "Nick Anderson"], "coach": "Stan Van Gundy", "sixth": "Dennis Scott"},
     "Philadelphia 76ers": {"players": ["Allen Iverson", "Julius Erving", "Wilt Chamberlein", "Joel Embiid", "Charles Barkley"], "coach": "Larry Brown", "sixth": "Bobby Jones"},
     "Phoenix Suns": {"players": ["Steve Nash", "Charles Barkley", "Devin Booker", "Kevin Johnson", "Amar'e stoudemire"], "coach": "Mike D'Antoni", "sixth": "Leandro Barbosa"},
     "Portland Trail Blazers": {"players": ["Damian Lilard", "Clyde Drexler", "Bill Walton", "LaMarcus Almdridge", "Terry Porter"], "coach": "Jack Ramsey", "sixth": "Cliff Robinson"},
@@ -34,11 +34,12 @@ nba_teams = {
     "Washington Wizards": {"players": ["Wes Unseld", "Elvin Hayes", "John Wall", "Bradley Beal", "Gilbert Areans"], "coach": "Dick Motta", "sixth": "Antwan Jamison"}}
 
 class Team:
-    def__init__(self, name, data):
+    def __init__(self, name, data):
         self.name = name
         self.players = data["players"]    
         self.coach = data ["coach"]
-        self.sixth = data ["sixth"
+        self.sixth = data ["sixth"]
+
     def get_player(self, number):
         return self.players[number - 1]
 
@@ -51,7 +52,7 @@ class NBATeam(Team):
             f"coach: {self.coach}\n"
             f"6th Man: {self.sixth}")
 
-class App
+class App:
     def __init__(self, root):
         self.root = root
         self.root.title("NBA GENERATOR")
@@ -81,8 +82,8 @@ class App
             team = random.choice(self.teams)
             info = team.get_info(num)
             self.result["text"] = info
-        except:
-            self.result["text" = "Invalid Input. Enter a number"
+        except ValueError:
+            self.result["text"] = "Invalid Input. Enter a number"
 
 root = tk.Tk()
 app = App(root)
