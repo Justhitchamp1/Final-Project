@@ -1,6 +1,6 @@
 import random
 import tkinter as tk 
-
+#The Nba teams data with the Dictionary and Lists in.
 nba_teams = {
     "Atlanta Hawks": {"players": ["Dominique Wilkins", "Bob Pettit", "Joe Johnson", "Lou Hudson", "Pete Maravich"], "coach": "Lenny Wilkins", "sixth": "Jamal Crawford"},
     "Boston Celtics": {"players": ["Bill Russell", "Larry Bird", "Paul Pierce", "John Havlicek", "Bob Cousy"], "coach": "Red Auerbach", "sixth": "Kevin Mchale"},
@@ -32,59 +32,59 @@ nba_teams = {
     "Toronto Raptors": {"players": ["Kawhi Leonard", "Vince Carter", "Kyle Lowry", "Chris Bosh", "Demar Derozan"], "coach": "Nick Nurse", "sixth": "Fred VanVleet"},
     "Utah Jazz": {"players": ["Karl Malone", "John Stockton", "Donovon Mitchell", "Pete Maravich", "Rudy Gobert"], "coach": "Jerry Sloan", "sixth": "Joe Ingles"},
     "Washington Wizards": {"players": ["Wes Unseld", "Elvin Hayes", "John Wall", "Bradley Beal", "Gilbert Areans"], "coach": "Dick Motta", "sixth": "Antwan Jamison"}}
-
+#The Base class of the program
 class Team:
     def __init__(self, name, data):
         self.name = name
         self.players = data["players"]    
         self.coach = data ["coach"]
         self.sixth = data ["sixth"]
-
+#Gets the player from the user number
     def get_player(self, number):
         return self.players[number - 1]
-
+#The subclass of the program 
 class NBATeam(Team):
-    def get_info(self, number):
+    def get_info(self, number): #Gets the info for the number and teams
         player = self.get_player(number)
         return (
             f"Team: {self.name}\n"
             f"Player: {player}\n"
             f"coach: {self.coach}\n"
             f"6th Man: {self.sixth}")
-
+#GUI Class
 class App:
     def __init__(self, root):
         self.root = root
         self.root.title("NBA GENERATOR")
-
+#Window Title for the program
         self.label = tk.Label(root, text="Pick a number from 1-5")
         self.label.pack()
-
+#Label for the program
         self.entry = tk.Entry(root)
         self.entry.pack()
 
         self.button = tk.Button(root, text="Get An NBA team", command=self.get_result)
         self.button.pack()
-
+#Gets the result for the label
         self.result = tk.Label(root, text="")
         self.result.pack()
-
+#The list for the team objects
         self.teams = []
-        for name in nba_teams:
+        for name in nba_teams: #adds every team onto the list
             team = NBATeam(name, nba_teams[name])
             self.teams.append(team)
-    def get_result(self):
+    def get_result(self): #Gets the results
         try:
-            num = int(self.entry.get())
+            num = int(self.entry.get()) #The users input into the program
             if num < 1 or num > 5:
                 self.result["text"] = "Enter a number between 1-5"
                 return
             team = random.choice(self.teams)
             info = team.get_info(num)
             self.result["text"] = info
-        except ValueError:
+        except ValueError: #Handles the errors in the program
             self.result["text"] = "Invalid Input. Enter a number"
-
+#Runs the program in the tkintker module
 root = tk.Tk()
 app = App(root)
 root.mainloop()
